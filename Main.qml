@@ -40,7 +40,7 @@ MediaPlayer {
     id: mpv
     source: "assets/images/cyberlogin.mp4"
     autoPlay: true 
-    loops: -1 
+    loops: 500 
 }
 
 VideoOutput {
