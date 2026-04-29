@@ -31,14 +31,14 @@ Rectangle {
     Image {
         id: bg
         anchors.fill: parent
-        source: config.background || "assets/images/background.jpg"
+        source: config.background || "assets/images/cyberlogin.mp4"
         fillMode: Image.PreserveAspectCrop
         onStatusChanged: if (status == Image.Ready) brightnessTimer.start()
     }
 
 MediaPlayer {
     id: mpv
-    source: "cyberlogin.mp4"
+    source: "assets/images/cyberlogin.mp4"
     autoPlay: true 
     loops: -1 
 }
@@ -107,7 +107,7 @@ VideoOutput {
     LoginPanel {
         id: loginPanel
         anchors.centerIn: parent; width: 400
-        fontName: container.globalFont; textColor: "white"
+        fontName: container.globalFont; textColor: "red"
         userIndex: container.userIdx; sessionIndex: container.sessionIdx
         onUserSelected: container.userIdx = index; onSessionSelected: container.sessionIdx = index
         opacity: container.isUnlocked ? 1.0 : 0.0; visible: opacity > 0; scale: container.isUnlocked ? 1.0 : 0.95
@@ -128,7 +128,7 @@ VideoOutput {
 
     Text {
         text: "PRESS ANY KEY TO UNLOCK"; font.family: container.globalFont; font.pixelSize: 14; font.letterSpacing: 1
-        color: "white"
+        color: "red"
         visible: container.readyToReveal
         opacity: visible ? (container.isUnlocked ? 0.0 : 0.6) : 0.0
         anchors.bottom: parent.bottom; anchors.horizontalCenter: parent.horizontalCenter; anchors.bottomMargin: 40
