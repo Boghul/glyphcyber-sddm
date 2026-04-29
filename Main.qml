@@ -31,7 +31,7 @@ Rectangle {
     Image {
         id: bg
         anchors.fill: parent
-        source: config.background || "assets/images/cyberlogin.mp4"
+        source: config.background || "assets/images/background.jpg"
         fillMode: Image.PreserveAspectCrop
         onStatusChanged: if (status == Image.Ready) brightnessTimer.start()
     }
