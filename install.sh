@@ -5,7 +5,7 @@
 
 set -e
 
-THEME_NAME="glyph"
+THEME_NAME="glyphcyber"
 THEME_DIR="/usr/share/sddm/themes/${THEME_NAME}"
 
 # Colors
@@ -55,7 +55,7 @@ echo -e "${GREEN}Done!${NC} Theme installed to ${THEME_DIR}"
 echo -e ""
 
 # Interactive configuration
-read -p "Would you like to set Glyph as your active SDDM theme? (y/N) " -n 1 -r
+read -p "Would you like to set Glyphcyber as your active SDDM theme? (y/N) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}==>${NC} Applying theme configuration..."
