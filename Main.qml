@@ -35,6 +35,18 @@ Rectangle {
         onStatusChanged: if (status == Image.Ready) brightnessTimer.start()
     }
 
+MediaPlayer {
+    id: mpv
+    source: "cyberlogin.mp4"
+    autoPlay: true 
+    loops: -1 
+}
+
+VideoOutput {
+    source: mpv
+    anchors.fill: parent
+}
+
     Timer { id: brightnessTimer; interval: 800; onTriggered: brightnessCanvas.requestPaint() }
 
     Canvas {
